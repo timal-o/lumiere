@@ -74,9 +74,12 @@ macOS runners are frequently unavailable on free plans; build and test on a Mac 
 
 1. Update the version in `package.json`, `src-tauri/Cargo.toml` and `src-tauri/tauri.conf.json`.
 2. Move the *Unreleased* entries of [CHANGELOG.md](../CHANGELOG.md) under the new version.
-3. Tag the commit (`git tag v0.6.0`) and push the tag.
-4. Build on each platform with `npm run tauri build` and attach the installers to a GitHub
-   release. macOS builds must be signed and notarised to open without warnings.
+3. Tag the commit (`git tag -a v0.7.0 -m "Lumière 0.7.0"`) and push the tag.
+4. The [Release workflow](../.github/workflows/release.yml) then builds the installers on GitHub —
+   Windows (`.msi`, `.exe`), Linux (`.deb`, `.rpm`, `.AppImage`) and macOS (Apple Silicon and
+   Intel `.dmg`) — and attaches them to the release of the tag. It can also be run by hand
+   (*Actions → Release → Run workflow*) for an existing tag. macOS builds must be signed and
+   notarised to open without warnings.
 
 ## Debugging
 

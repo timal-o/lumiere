@@ -137,6 +137,10 @@
 
 **下载**——在 [Releases](https://github.com/timal-o/lumiere/releases) 页面获取最新安装包。
 
+| 🪟 Windows | 🐧 Linux | 🍎 macOS |
+|:-:|:-:|:-:|
+| `.msi` · `.exe` | `.deb` · `.rpm` · `.AppImage` | `.dmg`（Apple Silicon · Intel） |
+
 > [!NOTE]
 > macOS 版本尚未公证：首次打开时请右键点击应用并选择 **打开**。
 

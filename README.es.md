@@ -138,6 +138,10 @@
 
 **Descargar** — el último instalador está en la página de [Releases](https://github.com/timal-o/lumiere/releases).
 
+| 🪟 Windows | 🐧 Linux | 🍎 macOS |
+|:-:|:-:|:-:|
+| `.msi` · `.exe` | `.deb` · `.rpm` · `.AppImage` | `.dmg` (Apple Silicon · Intel) |
+
 > [!NOTE]
 > La versión para macOS aún no está notarizada: la primera vez, haz clic derecho en la aplicación y elige **Abrir**.
 
