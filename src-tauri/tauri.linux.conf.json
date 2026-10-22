@@ -1,0 +1,5 @@
+{
+  "$comment": "Linux packages (deb, rpm, AppImage) only accept ASCII names: the package is named Lumiere, the window keeps its title.",
+  "productName": "Lumiere",
+  "mainBinaryName": "lumiere"
+}
