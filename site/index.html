@@ -68,6 +68,9 @@
     .steps li::before { content: counter(s); position: absolute; left: 16px; top: 14px; width: 32px; height: 32px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 700; display: grid; place-items: center; }
     .steps li b { display: block; margin-bottom: 2px; }
     .steps li span { color: var(--muted); font-size: 15.5px; }
+    .cmd { display: flex; gap: 8px; align-items: center; margin-top: 10px; background: #0f1115; border-radius: 10px; padding: 8px 8px 8px 12px; }
+    .cmd code { flex: 1; min-width: 0; color: #ffd28a; font: 14px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; overflow-x: auto; white-space: nowrap; }
+    .cmd button { background: var(--accent); color: #fff; border: 0; border-radius: 8px; padding: 8px 12px; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; }
     .note { max-width: 760px; margin: 14px auto 0; padding: 14px 16px; border-radius: 12px; background: color-mix(in srgb, var(--accent-2) 16%, var(--surface)); border: 1px solid color-mix(in srgb, var(--accent-2) 45%, var(--border)); font-size: 15px; }
     .warn { background: color-mix(in srgb, var(--accent) 12%, var(--surface)); border-color: color-mix(in srgb, var(--accent) 40%, var(--border)); }
     kbd { background: var(--surface-2); border: 1px solid var(--border); border-bottom-width: 2px; border-radius: 6px; padding: 1px 6px; font-size: 14px; font-family: inherit; }
@@ -169,9 +172,11 @@
       </ol>
       <ol class="steps hide" data-panel="mac">
         <li><b data-i18n="m1t"></b><span data-i18n="m1"></span></li>
-        <li><b data-i18n="m2t"></b><span data-i18n="m2"></span></li>
+        <li><b data-i18n="m2t"></b><span data-i18n="m2"></span>
+          <div class="cmd"><code id="macCmd">curl -fsSL https://timal-o.github.io/lumiere/install.sh | bash</code><button id="copyCmd" data-i18n="copy"></button></div></li>
         <li><b data-i18n="m3t"></b><span data-i18n="m3"></span></li>
       </ol>
+      <p class="note hide" data-panel-note="mac" data-i18n="macDmgNote"></p>
       <ol class="steps hide" data-panel="linux">
         <li><b data-i18n="l1t"></b><span data-i18n="l1"></span></li>
         <li><b data-i18n="l2t"></b><span data-i18n="l2"></span></li>

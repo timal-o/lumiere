@@ -26,9 +26,9 @@ const T = {
     w1t: "Téléchargez", w1: "Cliquez sur le gros bouton orange en haut de la page. Le fichier « Lumiere…setup.exe » arrive dans vos Téléchargements.",
     w2t: "Lancez l'installation", w2: "Double-cliquez sur le fichier. Si Windows affiche « Windows a protégé votre ordinateur », cliquez sur « Informations complémentaires » puis « Exécuter quand même ».",
     w3t: "Ouvrez Lumière", w3: "Suivez l'installation, puis ouvrez Lumière depuis le menu Démarrer.",
-    m1t: "Téléchargez", m1: "Choisissez votre Mac en haut de la page (dans le menu  → « À propos de ce Mac », la ligne « Puce » indique Apple M… ou Intel).",
-    m2t: "Installez", m2: "Ouvrez le fichier .dmg, puis glissez Lumière dans le dossier Applications.",
-    m3t: "Première ouverture", m3: "Ouvrez Lumière. Si le Mac refuse, allez dans Réglages Système → Confidentialité et sécurité, descendez et cliquez sur « Ouvrir quand même ». C'est à faire une seule fois.",
+    m1t: "Ouvrez le Terminal", m1: "Appuyez sur ⌘ + Espace, tapez « Terminal » puis Entrée. Une fenêtre s'ouvre.",
+    m2t: "Collez cette ligne", m2: "Cliquez sur « Copier », puis collez dans le Terminal (⌘ + V).",
+    m3t: "Appuyez sur Entrée", m3: "Lumière se télécharge, s'installe dans Applications et s'ouvre tout seul. Pour mettre à jour plus tard, refaites la même chose.",
     l1t: "Téléchargez", l1: "Le fichier .AppImage marche sur presque toutes les distributions. Sur Ubuntu ou Debian, vous pouvez aussi prendre le .deb (liste complète plus bas).",
     l2t: "Rendez-le exécutable", l2: "Clic droit sur le fichier → Propriétés → Permissions → cochez « Autoriser l'exécution ». Double-cliquez pour lancer.",
     l3t: "Accès au port USB", l3: "Pour parler au laser, votre compte doit être dans le groupe « dialout » : tapez sudo usermod -aG dialout $USER dans un terminal, puis déconnectez-vous et reconnectez-vous.",
@@ -54,6 +54,10 @@ const T = {
     disclaimer: "Projet indépendant, sans lien avec les fabricants de lasers ni les éditeurs de logiciels cités.",
     osWin: "Windows", osMac: "Mac", osLinux: "Linux",
     kWinExe: "Windows — installeur", kWinMsi: "Windows — paquet MSI", kMacArm: "Mac à puce Apple", kMacIntel: "Mac Intel", kAppImage: "Linux — AppImage", kDeb: "Linux — .deb (Ubuntu, Debian)", kRpm: "Linux — .rpm (Fedora)",
+    macDmgNote: "Vous préférez le fichier .dmg du bouton orange ? Sur les Mac récents, macOS dira que Lumière est « endommagée » (le logiciel n'est pas encore signé par Apple). Dans ce cas, collez dans le Terminal : xattr -dr com.apple.quarantine /Applications/Lumière.app",
+    cmdCopied: "Commande copiée ! Collez-la dans le Terminal.",
+    macInstall: "Installer sur Mac",
+    macInstallHint: "En une ligne, sans message d'erreur — ou fichiers .dmg ci-dessous",
   },
   en: {
     navInstall: "Install", navLaser: "Connect your laser", navFaq: "FAQ",
@@ -75,9 +79,9 @@ const T = {
     w1t: "Download", w1: "Click the big orange button at the top of the page. The file “Lumiere…setup.exe” lands in your Downloads.",
     w2t: "Run the installer", w2: "Double-click the file. If Windows says “Windows protected your PC”, click “More info”, then “Run anyway”.",
     w3t: "Open Lumière", w3: "Follow the installer, then open Lumière from the Start menu.",
-    m1t: "Download", m1: "Pick your Mac at the top of the page ( menu → “About This Mac”: the “Chip” line says Apple M… or Intel).",
-    m2t: "Install", m2: "Open the .dmg file, then drag Lumière into the Applications folder.",
-    m3t: "First launch", m3: "Open Lumière. If the Mac refuses, go to System Settings → Privacy & Security, scroll down and click “Open Anyway”. You only do this once.",
+    m1t: "Open Terminal", m1: "Press ⌘ + Space, type “Terminal” and press Enter. A window opens.",
+    m2t: "Paste this line", m2: "Click “Copy”, then paste it into Terminal (⌘ + V).",
+    m3t: "Press Enter", m3: "Lumière downloads, installs into Applications and opens by itself. To update later, do the same again.",
     l1t: "Download", l1: "The .AppImage file works on almost every distribution. On Ubuntu or Debian you can also take the .deb (full list below).",
     l2t: "Make it executable", l2: "Right-click the file → Properties → Permissions → tick “Allow executing file as program”. Double-click to start.",
     l3t: "USB port access", l3: "To talk to the laser, your account must be in the “dialout” group: run sudo usermod -aG dialout $USER in a terminal, then log out and back in.",
@@ -103,6 +107,10 @@ const T = {
     disclaimer: "Independent project, not affiliated with the laser makers or software publishers mentioned.",
     osWin: "Windows", osMac: "Mac", osLinux: "Linux",
     kWinExe: "Windows — installer", kWinMsi: "Windows — MSI package", kMacArm: "Mac with Apple chip", kMacIntel: "Intel Mac", kAppImage: "Linux — AppImage", kDeb: "Linux — .deb (Ubuntu, Debian)", kRpm: "Linux — .rpm (Fedora)",
+    macDmgNote: "Prefer the .dmg file from the orange button? On recent Macs, macOS will say Lumière is “damaged” (the app is not signed by Apple yet). In that case, paste into Terminal: xattr -dr com.apple.quarantine /Applications/Lumière.app",
+    cmdCopied: "Command copied! Paste it into Terminal.",
+    macInstall: "Install on Mac",
+    macInstallHint: "In one line, no error message — or .dmg files below",
   },
   es: {
     navInstall: "Instalar", navLaser: "Conectar el láser", navFaq: "Preguntas",
@@ -124,9 +132,9 @@ const T = {
     w1t: "Descarga", w1: "Haz clic en el botón naranja de arriba. El archivo «Lumiere…setup.exe» llega a tus Descargas.",
     w2t: "Instala", w2: "Haz doble clic en el archivo. Si Windows muestra «Windows protegió su PC», haz clic en «Más información» y luego en «Ejecutar de todas formas».",
     w3t: "Abre Lumière", w3: "Sigue el instalador y abre Lumière desde el menú Inicio.",
-    m1t: "Descarga", m1: "Elige tu Mac arriba (menú  → «Acerca de este Mac»: la línea «Chip» indica Apple M… o Intel).",
-    m2t: "Instala", m2: "Abre el archivo .dmg y arrastra Lumière a la carpeta Aplicaciones.",
-    m3t: "Primera apertura", m3: "Abre Lumière. Si el Mac lo rechaza, ve a Ajustes del Sistema → Privacidad y seguridad, baja y haz clic en «Abrir igualmente». Solo una vez.",
+    m1t: "Abre Terminal", m1: "Pulsa ⌘ + Espacio, escribe «Terminal» y pulsa Intro. Se abre una ventana.",
+    m2t: "Pega esta línea", m2: "Haz clic en «Copiar» y pégala en Terminal (⌘ + V).",
+    m3t: "Pulsa Intro", m3: "Lumière se descarga, se instala en Aplicaciones y se abre solo. Para actualizar más tarde, repite lo mismo.",
     l1t: "Descarga", l1: "El archivo .AppImage funciona en casi todas las distribuciones. En Ubuntu o Debian también puedes usar el .deb (lista completa abajo).",
     l2t: "Hazlo ejecutable", l2: "Clic derecho en el archivo → Propiedades → Permisos → marca «Permitir ejecutar como programa». Doble clic para abrir.",
     l3t: "Acceso al puerto USB", l3: "Para hablar con el láser, tu cuenta debe estar en el grupo «dialout»: escribe sudo usermod -aG dialout $USER en un terminal y vuelve a iniciar sesión.",
@@ -152,6 +160,10 @@ const T = {
     disclaimer: "Proyecto independiente, sin relación con los fabricantes de láseres ni los editores de software mencionados.",
     osWin: "Windows", osMac: "Mac", osLinux: "Linux",
     kWinExe: "Windows — instalador", kWinMsi: "Windows — paquete MSI", kMacArm: "Mac con chip Apple", kMacIntel: "Mac Intel", kAppImage: "Linux — AppImage", kDeb: "Linux — .deb (Ubuntu, Debian)", kRpm: "Linux — .rpm (Fedora)",
+    macDmgNote: "¿Prefieres el archivo .dmg del botón naranja? En los Mac recientes, macOS dirá que Lumière está «dañada» (la app aún no está firmada por Apple). En ese caso, pega en Terminal: xattr -dr com.apple.quarantine /Applications/Lumière.app",
+    cmdCopied: "¡Comando copiado! Pégalo en Terminal.",
+    macInstall: "Instalar en Mac",
+    macInstallHint: "En una línea, sin mensajes de error — o archivos .dmg abajo",
   },
   zh: {
     navInstall: "安装", navLaser: "连接激光器", navFaq: "常见问题",
@@ -173,9 +185,9 @@ const T = {
     w1t: "下载", w1: "点击页面顶部的橙色大按钮，文件“Lumiere…setup.exe”会保存到“下载”文件夹。",
     w2t: "运行安装程序", w2: "双击文件。如果 Windows 显示“Windows 已保护你的电脑”，点击“更多信息”，再点击“仍要运行”。",
     w3t: "打开 Lumière", w3: "完成安装后，从开始菜单打开 Lumière。",
-    m1t: "下载", m1: "在页面顶部选择你的 Mac（苹果菜单 → “关于本机”：“芯片”一行显示 Apple M… 或 Intel）。",
-    m2t: "安装", m2: "打开 .dmg 文件，把 Lumière 拖到“应用程序”文件夹。",
-    m3t: "首次打开", m3: "打开 Lumière。如果 Mac 拒绝打开，请前往“系统设置 → 隐私与安全性”，向下滚动并点击“仍要打开”。只需操作一次。",
+    m1t: "打开“终端”", m1: "按 ⌘ + 空格，输入“终端”（Terminal）并按回车，会打开一个窗口。",
+    m2t: "粘贴这一行", m2: "点击“复制”，然后粘贴到终端中（⌘ + V）。",
+    m3t: "按回车", m3: "Lumière 会自动下载、安装到“应用程序”并打开。以后更新时再执行一次即可。",
     l1t: "下载", l1: ".AppImage 文件几乎适用于所有发行版。Ubuntu 或 Debian 也可以使用 .deb（完整列表见下方）。",
     l2t: "设为可执行", l2: "右键文件 → 属性 → 权限 → 勾选“允许作为程序执行文件”，然后双击启动。",
     l3t: "USB 端口权限", l3: "要与激光器通信，你的账户需加入“dialout”组：在终端运行 sudo usermod -aG dialout $USER，然后注销并重新登录。",
@@ -201,6 +213,10 @@ const T = {
     disclaimer: "独立项目，与文中提及的激光器厂商和软件发行商无关。",
     osWin: "Windows", osMac: "Mac", osLinux: "Linux",
     kWinExe: "Windows — 安装程序", kWinMsi: "Windows — MSI 安装包", kMacArm: "Apple 芯片的 Mac", kMacIntel: "Intel 芯片的 Mac", kAppImage: "Linux — AppImage", kDeb: "Linux — .deb（Ubuntu、Debian）", kRpm: "Linux — .rpm（Fedora）",
+    macDmgNote: "想用橙色按钮下载的 .dmg 文件？在较新的 Mac 上，macOS 会提示 Lumière“已损坏”（应用尚未经过 Apple 签名）。这时请在终端中粘贴：xattr -dr com.apple.quarantine /Applications/Lumière.app",
+    cmdCopied: "命令已复制！请粘贴到终端中。",
+    macInstall: "在 Mac 上安装",
+    macInstallHint: "一行命令，无错误提示——或使用下方的 .dmg 文件",
   },
 };
 
@@ -285,14 +301,12 @@ function render() {
     primary.href = link(f.appImage);
     document.getElementById("dlLabel").textContent = tr("dlFor", { os: tr("osLinux") });
     document.getElementById("dlDetail").textContent = `AppImage${size(f.appImage)}`;
-  } else if (macArch) {
-    const a = macArch === "arm" ? f.macArm : f.macIntel;
-    primary.href = link(a);
-    document.getElementById("dlLabel").textContent = tr("dlFor", { os: tr("osMac") });
-    document.getElementById("dlDetail").textContent = `${tr(macArch === "arm" ? "macArm" : "macIntel")}${size(a)}`;
   } else {
-    // Mac dont la puce est inconnue (Safari) : deux boutons clairs.
-    primary.classList.add("hide");
+    // Mac : l'installation en une ligne évite le message « endommagée » des versions récentes
+    // de macOS (application pas encore signée par Apple) ; les .dmg restent proposés dessous.
+    primary.href = "#install";
+    document.getElementById("dlLabel").textContent = tr("macInstall");
+    document.getElementById("dlDetail").textContent = tr("macInstallHint");
     macChoice.classList.remove("hide");
     document.getElementById("dlMacArm").href = link(f.macArm);
     document.getElementById("dlMacIntel").href = link(f.macIntel);
@@ -308,6 +322,7 @@ function render() {
 function showOs(o) {
   document.querySelectorAll(".tabs button").forEach((b) => b.classList.toggle("on", b.dataset.os === o));
   document.querySelectorAll("[data-panel]").forEach((p) => p.classList.toggle("hide", p.dataset.panel !== o));
+  document.querySelectorAll("[data-panel-note]").forEach((p) => p.classList.toggle("hide", p.dataset.panelNote !== o));
 }
 document.querySelectorAll(".tabs button").forEach((b) => b.addEventListener("click", () => showOs(b.dataset.os)));
 showOs(os);
@@ -347,6 +362,11 @@ function shareLinks() {
   document.getElementById("shReddit").href = `https://www.reddit.com/submit?url=${u}&title=${text}`;
   document.getElementById("shMail").href = `mailto:?subject=${text}&body=${text}%0A${u}`;
 }
+document.getElementById("copyCmd").addEventListener("click", async () => {
+  const cmd = document.getElementById("macCmd").textContent;
+  try { await navigator.clipboard.writeText(cmd); } catch { /* copie manuelle */ }
+  toast(tr("cmdCopied"));
+});
 const nativeBtn = document.getElementById("nativeShare");
 if (navigator.share) {
   nativeBtn.classList.remove("hide");

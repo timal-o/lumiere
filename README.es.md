@@ -143,7 +143,11 @@
 | `.msi` · `.exe` | `.deb` · `.rpm` · `.AppImage` | `.dmg` (Apple Silicon · Intel) |
 
 > [!NOTE]
-> La versión para macOS aún no está notarizada: la primera vez, haz clic derecho en la aplicación y elige **Abrir**.
+> **Mac:** la app aún no está notarizada por Apple, así que los macOS recientes dicen que el `.dmg` descargado está «dañado».
+> Instala mejor con una línea en Terminal: descarga la versión correcta y la abre.
+> ```sh
+> curl -fsSL https://timal-o.github.io/lumiere/install.sh | bash
+> ```
 
 **Compilar** — necesitas [Node.js](https://nodejs.org) 18+, [Rust](https://rustup.rs) (estable)
 y los [requisitos de Tauri](https://v2.tauri.app/start/prerequisites/) de tu sistema.

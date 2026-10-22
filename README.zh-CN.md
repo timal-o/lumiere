@@ -142,7 +142,11 @@
 | `.msi` · `.exe` | `.deb` · `.rpm` · `.AppImage` | `.dmg`（Apple Silicon · Intel） |
 
 > [!NOTE]
-> macOS 版本尚未公证：首次打开时请右键点击应用并选择 **打开**。
+> **Mac：** 应用尚未经过 Apple 公证，较新的 macOS 会提示下载的 `.dmg`“已损坏”。
+> 请改用终端中的一行命令安装——它会下载合适的版本并打开：
+> ```sh
+> curl -fsSL https://timal-o.github.io/lumiere/install.sh | bash
+> ```
 
 **从源码构建**——需要 [Node.js](https://nodejs.org) 18+、[Rust](https://rustup.rs)（稳定版）
 以及适用于你系统的 [Tauri 依赖](https://v2.tauri.app/start/prerequisites/)。

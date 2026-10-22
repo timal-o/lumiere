@@ -143,7 +143,11 @@
 | `.msi` · `.exe` | `.deb` · `.rpm` · `.AppImage` | `.dmg` (Apple Silicon · Intel) |
 
 > [!NOTE]
-> The macOS build is not notarized yet: the first time, right-click the app and choose **Open**.
+> **Mac:** the app is not notarized by Apple yet, so recent macOS versions call the downloaded `.dmg` “damaged”.
+> Install with one line in Terminal instead — it downloads the right version and opens it:
+> ```sh
+> curl -fsSL https://timal-o.github.io/lumiere/install.sh | bash
+> ```
 
 **Build from source** — you need [Node.js](https://nodejs.org) 18+, [Rust](https://rustup.rs) (stable)
 and the [Tauri prerequisites](https://v2.tauri.app/start/prerequisites/) for your OS.
