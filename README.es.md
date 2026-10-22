@@ -136,7 +136,7 @@
 
 ## 🚀 Inicio rápido
 
-**Descargar** — el último instalador está en la página de [Releases](https://github.com/timal-o/lumiere/releases).
+**Descargar** — lo más fácil es la web: **[timal-o.github.io/lumiere](https://timal-o.github.io/lumiere/)** elige el instalador adecuado para tu ordenador. Todos los archivos están también en [Releases](https://github.com/timal-o/lumiere/releases).
 
 | 🪟 Windows | 🐧 Linux | 🍎 macOS |
 |:-:|:-:|:-:|

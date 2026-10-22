@@ -135,7 +135,7 @@
 
 ## 🚀 快速开始
 
-**下载**——在 [Releases](https://github.com/timal-o/lumiere/releases) 页面获取最新安装包。
+**下载**——最简单的方式是访问网站 **[timal-o.github.io/lumiere](https://timal-o.github.io/lumiere/)**，它会为你的电脑选择合适的安装包。所有文件也可在 [Releases](https://github.com/timal-o/lumiere/releases) 页面获取。
 
 | 🪟 Windows | 🐧 Linux | 🍎 macOS |
 |:-:|:-:|:-:|

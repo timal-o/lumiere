@@ -136,7 +136,7 @@
 
 ## 🚀 Démarrage rapide
 
-**Télécharger** — prenez le dernier installeur sur la page [Releases](https://github.com/timal-o/lumiere/releases).
+**Télécharger** — le plus simple est le site : **[timal-o.github.io/lumiere](https://timal-o.github.io/lumiere/)** choisit le bon installeur pour votre ordinateur. Tous les fichiers sont aussi sur la page [Releases](https://github.com/timal-o/lumiere/releases).
 
 | 🪟 Windows | 🐧 Linux | 🍎 macOS |
 |:-:|:-:|:-:|

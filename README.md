@@ -136,7 +136,7 @@
 
 ## 🚀 Quick start
 
-**Download** — grab the latest installer from the [Releases](https://github.com/timal-o/lumiere/releases) page.
+**Download** — the easiest way is the website: **[timal-o.github.io/lumiere](https://timal-o.github.io/lumiere/)** picks the right installer for your computer. All files are also on the [Releases](https://github.com/timal-o/lumiere/releases) page.
 
 | 🪟 Windows | 🐧 Linux | 🍎 macOS |
 |:-:|:-:|:-:|
