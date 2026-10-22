@@ -6,6 +6,11 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.6.2] — 2026-10-22
+
+### Fixed
+- macOS: the app bundle is now fully (ad-hoc) signed. Downloaded copies no longer show “Lumière is damaged”; the usual “Open Anyway” in Privacy & Security works.
+
 ## [0.6.1] — 2026-10-22
 
 ### Fixed
@@ -168,7 +173,8 @@ First public version. Nothing has been validated on real hardware yet.
 - Experimental Ruida UDP driver.
 - Native menu bar, machine profiles, keyboard shortcuts, built-in quick start guide.
 
-[Unreleased]: https://github.com/timal-o/lumiere/compare/v0.6.1...HEAD
+[Unreleased]: https://github.com/timal-o/lumiere/compare/v0.6.2...HEAD
+[0.6.2]: https://github.com/timal-o/lumiere/compare/v0.6.1...v0.6.2
 [0.6.1]: https://github.com/timal-o/lumiere/compare/v0.6.0...v0.6.1
 [0.6.0]: https://github.com/timal-o/lumiere/compare/v0.5.0...v0.6.0
 [0.5.0]: https://github.com/timal-o/lumiere/releases/tag/v0.5.0
