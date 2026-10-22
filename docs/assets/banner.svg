@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="400" viewBox="0 0 1280 400">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#121419"/>
+      <stop offset="1" stop-color="#1d2028"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff5a36" stop-opacity="0"/>
+      <stop offset="0.55" stop-color="#ff5a36" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#ffb347"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffb347" stop-opacity="0.85"/>
+      <stop offset="0.35" stop-color="#ff5a36" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#ff5a36" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="400" rx="24" fill="url(#bg)"/>
+  <rect width="1280" height="400" rx="24" fill="url(#grid)"/>
+  <!-- Faisceau et point de gravure -->
+  <rect x="1132" y="0" width="16" height="318" fill="url(#beam)"/>
+  <circle cx="1140" cy="330" r="110" fill="url(#glow)"/>
+  <circle cx="1140" cy="330" r="14" fill="#ffd28a"/>
+  <!-- Trace gravée laissée derrière le point -->
+  <path d="M1140 330 C 1080 330, 1060 360, 980 356 S 860 336, 800 352" fill="none" stroke="#ff5a36" stroke-width="3" stroke-dasharray="2 7" stroke-linecap="round" opacity="0.8"/>
+  <!-- Logo -->
+  <g transform="translate(110 113) scale(0.17)">
+    <rect width="1024" height="1024" rx="220" fill="#16181d" stroke="#2c303a" stroke-width="12"/>
+    <path d="M512 150 L512 560" stroke="#ff5a36" stroke-width="56" stroke-linecap="round"/>
+    <circle cx="512" cy="620" r="70" fill="#ffb347"/>
+    <path d="M250 820 H774" stroke="#e8e8e8" stroke-width="40" stroke-linecap="round"/>
+    <path d="M400 700 L340 780 M624 700 L684 780 M512 720 V790" stroke="#ffb347" stroke-width="28" stroke-linecap="round"/>
+  </g>
+  <!-- Titre -->
+  <text x="330" y="190" font-family="-apple-system, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="96" font-weight="700" fill="#f2f3f5" letter-spacing="-2">Lumière</text>
+  <text x="334" y="240" font-family="-apple-system, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="30" fill="#aab1bd">Open-source laser engraving &amp; cutting software</text>
+  <text x="334" y="288" font-family="-apple-system, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="20" fill="#7f8796">Design · Prepare · Burn — GRBL, Marlin, Smoothieware · macOS, Windows, Linux</text>
+</svg>

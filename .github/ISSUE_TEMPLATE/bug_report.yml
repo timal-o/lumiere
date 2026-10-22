@@ -1,0 +1,49 @@
+name: Bug report
+description: Something does not work as expected
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! For security issues, use private vulnerability reporting instead (see SECURITY.md).
+        If the laser behaved dangerously, add **[safety]** to the title.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Import …
+        2. Set layer to …
+        3. Click …
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Lumière version or commit
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: macOS 15.3, Windows 11, Ubuntu 24.04…
+    validations:
+      required: true
+  - type: input
+    id: machine
+    attributes:
+      label: Machine and controller (if relevant)
+      placeholder: "Ortur LM3, GRBL 1.1h, USB"
+  - type: textarea
+    id: files
+    attributes:
+      label: Files
+      description: Attach the .lum project, the generated G-code or the imported file when possible.

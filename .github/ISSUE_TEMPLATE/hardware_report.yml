@@ -1,0 +1,54 @@
+name: Hardware report
+description: Tell us how Lumière works (or not) with your machine
+labels: [hardware]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Hardware reports are the most useful contribution right now. Test without material and at low power first.
+  - type: input
+    id: machine
+    attributes:
+      label: Machine
+      placeholder: Brand and model, laser type and power (e.g. Sculpfun S30, 10 W diode)
+    validations:
+      required: true
+  - type: input
+    id: controller
+    attributes:
+      label: Controller and firmware
+      placeholder: "GRBL 1.1h ($I output), FluidNC 3.7, Ruida RDC6445G…"
+    validations:
+      required: true
+  - type: dropdown
+    id: link
+    attributes:
+      label: Connection
+      options: [USB serial, Network (TCP), Network (Ruida UDP), .rd file]
+    validations:
+      required: true
+  - type: checkboxes
+    id: tested
+    attributes:
+      label: What did you test?
+      options:
+        - label: Connection and status
+        - label: Jog and homing
+        - label: Framing
+        - label: Line cutting
+        - label: Fill engraving
+        - label: Image engraving
+        - label: Pause / resume / stop
+  - type: textarea
+    id: results
+    attributes:
+      label: Results
+      description: What worked, what did not, and anything surprising. Attach the G-code for problems.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Lumière version or commit and operating system
+    validations:
+      required: true

@@ -1,0 +1,42 @@
+{
+  "name": "lumiere",
+  "description": "Open-source laser engraving and cutting software",
+  "private": true,
+  "version": "0.6.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "tauri": "tauri",
+    "test": "vitest run",
+    "i18n": "node scripts/i18n.mjs"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.0.0",
+    "@tauri-apps/plugin-dialog": "^2.0.0",
+    "@tauri-apps/plugin-opener": "^2.7.2",
+    "clipper-lib": "^6.4.2",
+    "jsbarcode": "^3.11.6",
+    "opentype.js": "^1.3.4",
+    "pdfjs-dist": "6.4.299",
+    "qrcode-generator": "^1.4.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0",
+    "@types/node": "^22.20.5",
+    "@types/opentype.js": "^1.3.8",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.0",
+    "vitest": "^2.1.9"
+  },
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timal-o/lumiere.git"
+  }
+}

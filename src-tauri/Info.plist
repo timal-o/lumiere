@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>NSCameraUsageDescription</key>
+  <string>Lumière affiche l'image de la caméra du laser sous le dessin pour placer les pièces.</string>
+  <key>NSLocalNetworkUsageDescription</key>
+  <string>Lumière se connecte aux lasers sur votre réseau (FluidNC, grblHAL…).</string>
+</dict>
+</plist>
